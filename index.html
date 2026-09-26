@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PedroSpiders — Aranhas & Invertebrados</title>
+  <meta name="description" content="PedroSpiders — catálogo de aranhas e invertebrados criados em cativeiro.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#">🕷️ Pedro<span>Spiders</span></a>
+  <nav>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button id="cartBtn" class="cart">🛒 <b id="cartCount">0</b></button>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">PEDROSPIDERS • PORTUGAL</p>
+    <h1>Pequenas criaturas.<br><span>Grande obsessão.</span></h1>
+    <p class="heroText">Catálogo de aranhas saltadoras e outros invertebrados de cativeiro, com informação clara sobre cada animal.</p>
+    <a class="button" href="#catalogo">Ver catálogo ↓</a>
+  </div>
+  <div class="heroSpider">🕷️</div>
+</section>
+
+<main>
+<section id="catalogo" class="section">
+  <div class="sectionHead">
+    <div><p class="eyebrow">CATÁLOGO</p><h2>Animais disponíveis</h2></div>
+    <select id="filter">
+      <option value="all">Todos</option>
+      <option value="jumping">Jumping spiders</option>
+      <option value="other">Outros</option>
+    </select>
+  </div>
+  <div id="products" class="grid"></div>
+</section>
+
+<section id="sobre" class="info">
+  <div><p class="eyebrow">PEDROSPIDERS</p><h2>Feito para quem gosta de bichos fora do normal.</h2></div>
+  <p>O PedroSpiders é um pequeno projeto dedicado à criação e manutenção responsável de invertebrados. Cada anúncio deve indicar espécie, sexo quando conhecido, fase/tamanho, origem e condições de manutenção.</p>
+</section>
+
+<section id="contacto" class="section contact">
+  <p class="eyebrow">CONTACTO</p>
+  <h2>Queres saber mais?</h2>
+  <p>Usa o formulário para pedir informações sobre um animal. A disponibilidade e qualquer venda/transferência ficam sempre sujeitas à legislação aplicável.</p>
+  <form id="contactForm">
+    <input required placeholder="Nome" id="name">
+    <input required type="email" placeholder="Email" id="email">
+    <textarea required placeholder="Mensagem" id="message"></textarea>
+    <button class="button" type="submit">Enviar pedido</button>
+  </form>
+  <p id="formStatus" class="status"></p>
+</section>
+</main>
+
+<footer>© 2026 PedroSpiders • Aracnídeos & Invertebrados • <span>Informação antes da compra.</span></footer>
+
+<aside id="cartPanel" class="cartPanel">
+  <div class="cartHeader"><h2>Carrinho</h2><button id="closeCart">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cartTotal">Total indicativo: <strong id="cartTotal">€0,00</strong></div>
+  <button id="checkout" class="button full">Pedir disponibilidade</button>
+  <small>Este protótipo não processa pagamentos.</small>
+</aside>
+
+<div id="overlay"></div>
+<script src="script.js"></script>
+</body>
+</html>
